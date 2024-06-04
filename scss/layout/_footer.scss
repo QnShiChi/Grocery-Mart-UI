@@ -1,0 +1,172 @@
+@use "../abstracts";
+
+.footer {
+  padding: 50px 0;
+  background: var(--footer-bg-color);
+
+  &__row {
+    display: grid;
+    grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+    gap: 60px;
+
+    @include abstracts.breakpoint(lg) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__desc {
+    color: var(--text-color);
+    margin-top: 30px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  &__help-text {
+    color: var(--text-color);
+    margin-top: 40px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px;
+    padding: 16px 0;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 2px solid #d2d1d6;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.667%;
+    color: var(--text-color);
+    background: transparent;
+
+    &::placeholder {
+      color: #9e9da8;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    @include abstracts.breakpoint(lg) {
+      width: 50%;
+    }
+
+    @include abstracts.breakpoint(md) {
+      flex: 1;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--text-color);
+  }
+
+  &__list {
+    margin-top: 18px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 8px 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--text-color);
+
+    &:hover {
+      color: #0071dc;
+    }
+  }
+
+  &__label {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--text-color);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    @include abstracts.breakpoint(md) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--text-color);
+
+    @include abstracts.breakpoint(md) {
+      margin-top: 40px;
+    }
+
+    @include abstracts.breakpoint(sm) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      filter: grayscale(50%);
+      transition: filter, translate;
+      transition-duration: 0.3s;
+
+      @include abstracts.breakpoint(sm) {
+        width: 42px;
+        height: 42px;
+      }
+
+      &--facebook {
+        background: #4863a9;
+      }
+
+      &--youtube {
+        background: #f00;
+      }
+
+      &--tiktok {
+        background: #000;
+      }
+
+      &--twitter {
+        background: #4999e6;
+      }
+
+      &--linkedin {
+        background: #2f71ab;
+      }
+
+      &:hover {
+        filter: grayscale(0);
+        translate: 0 -5px;
+      }
+    }
+
+    &-icon {
+      filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(2%) hue-rotate(72deg) brightness(109%)
+        contrast(100%);
+    }
+  }
+}

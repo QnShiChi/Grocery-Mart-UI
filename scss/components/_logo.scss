@@ -1,0 +1,15 @@
+@use "../abstracts";
+.group-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+}
+
+
+.logo-title {
+  color: var(--text-color);
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.45;
+}
