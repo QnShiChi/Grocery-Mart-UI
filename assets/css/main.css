@@ -4276,6 +4276,9 @@ html.dark {
   font-weight: 500;
   line-height: 144.444%;
 }
+.cart-info__continue-btn {
+  color: #000;
+}
 .cart-info__row {
   display: flex;
   align-items: center;
